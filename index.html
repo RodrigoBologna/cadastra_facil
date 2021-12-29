@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@500&family=Montserrat:wght@200&display=swap" rel="stylesheet">  
+    <script src="./login.js"></script>
+    <title>Cadastra Fácil</title>
+</head>
+<body>
+    <div class="lcontainer">
+        <h1>Cadastra Fácil</h1>
+        <div class="lform">
+            <form>
+                <div class="field">
+                    <div class="control">
+                        <input class="input" name="user" id="user" type="text" placeholder="Usuário" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <input class="input" name="password" id="password" type="password" placeholder="Senha" required>
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <p class="control">
+                        <button type="submit" class="button is-dark" id="button" onclick="validar(event);" >
+                            Login
+                        </button>
+                    </p>
+                </div>
+                
+            </form>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

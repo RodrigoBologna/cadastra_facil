@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@500&family=Montserrat:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-image: url(./img/03.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden;
+    animation: slideBg 20s linear infinite 3s;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes slideBg{
+    35%{
+        background-image: url(./img/f674273dee3306b19c3ea7ab2f753485.jpg);
+    }
+    65%{
+        background-image: url(./img/02.jpg);
+    }
+    100%{
+        background-image: url(./img/03.jpg);
+    }
+   
+
+}
+.lcontainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.lcontainer h1{
+    font-family: 'Grandstander', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+p{
+    color: white;
+    font-size: 18px;
+    
+}
+.lform{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 15px;
+
+}
+.input{
+    width: 200px;
+    height: 30px;
+    margin-bottom: 30px;    
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    color: white;
+    font-size: 15px;
+}
+
+#button{
+    background-color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    transition: 1s;
+    
+}
+#button:hover{
+    background-color: black;
+    color: white    ;
+  
+}
+@media (max-width:700px) {
+    .lform{
+        width: 200px;
+    }
+    .lcontainer h1{
+        font-size: 40px;
+    }
+    .input{
+        width: 150px;
+    }
+}
+@media (max-width:350px){
+    .input{
+        width: 100px;
+    }
+}

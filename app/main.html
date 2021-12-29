@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@500&family=Montserrat:wght@200&display=swap" rel="stylesheet">  
+    <title>Sistema de Cadastro</title>
+   
+</head>
+    <header id="header">
+        <div class="menu">
+            <a href="#header"><div class="logo"  id="logo">Cadastra Fácil</div></a>
+            <nav>
+                <ul>
+                    <a href="#header"><li>Inicio</li></a>
+                    <a href="#container"><li>Cadastro de Clientes</li></a>
+                    <a href="#container2"><li>Relação de Clientes</li></a>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+<body>
+  
+    <section id="topo"></section>
+    <section class="container" id="container">
+        <form id="cadastroRegistro">
+            <div class="formulario">
+            <div class="field">
+                <div class="control">
+                    <input class="input" name="name" data-index="new" id="name" type="text" placeholder="Nome" required>
+                </div>
+            </div>
+           
+            <div class="field">
+                <div class="control">
+                    <input class="input" id="phone" type="text" placeholder="Telefone " maxlength="15" minlength="11" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);">
+                </div>
+            </div>
+           
+    
+            <div class="field">
+                <div class="control">
+                    <input class="input" id="email" type="email" placeholder="Email" required>
+                </div>
+            </div>
+    
+            <div class="field">
+                <div class="control">
+                    <input class="input" id="cpf" type="text" placeholder="CPF" onkeyup="cpf_mask()"autocomplete="off"maxlength="14" onblur="validarCPF(this)">
+                </div>
+            </div>
+    
+            <div class="field">
+                <div class="control">
+                    <input class="input" id="cep" type="text" placeholder="Cep" value="" size="10" maxlength="9"
+                        onblur="pesquisacep(this.value)" required>
+                </div>
+    
+            </div>
+    
+            <div class="field">
+                <div class="control">
+                    <input class="input" id="rua" type="text" placeholder="Endereço">
+                </div>
+            </div>
+    
+            <div class="field">
+                <div class="control">
+                    <input class="input" id="numero" type="text" placeholder="Número">
+                </div>
+            </div>
+    
+            <div class="field">
+                <div class="control">
+                    <input class="input" id="bairro" type="text" placeholder="Bairro">
+                </div>
+            </div>
+    
+            <div class="field">
+                <div class="control">
+                    <input class="input" id="cidade" type="text" placeholder="Cidade">
+                </div>
+            </div>
+    
+            <div class="field is-grouped">
+                <a href="#container2"><button class="button is-dark" onclick="saveClient()" id="button">
+                    Cadastrar
+                </button></a>
+            
+            </div>
+        </div>
+        </form>
+    
+    </section>
+
+<section class="container2" id="container2">
+    
+    <div id="listaRegistros">
+        
+        <table id="tableClient">
+            <div class="search">
+                <form action="" method="submit">
+                <input type="search" id="search" name="q" aria-label="Search through site content" placeholder="Pesquisa por Nome" >
+                
+                </form>
+            </div>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Cpf/Cnpj</th>
+                    <th>Cep</th>
+                    <th>Endereço</th>
+                    <th>Número</th>
+                    <th>Bairro</th>
+                    <th>Cidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            
+            </tbody>
+          
+        </table>
+    </div>
+
+
+
+
+</section>
+
+<script src="./index.js" defer></script> 
+</body>
+</html>
